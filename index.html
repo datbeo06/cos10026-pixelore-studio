@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixelore Studio — Where creativity meets code.</title>
+
+    <!-- External stylesheet (shared across all 4 pages) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Embedded CSS (required per assignment — page-specific overrides) -->
+    <style>
+        /* Hero pixel-dot decorative overlay */
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(168, 85, 247, 0.2);
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            color: #A855F7;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Services table category rows */
+        .services-section {
+            background-color: #f8f5ff;
+            padding: 3.5rem 1.5rem;
+        }
+
+        /* Highlight box for key company stats */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            padding: 2rem 1.5rem;
+            background-color: #2D1B69;
+            color: #ffffff;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #A855F7;
+            line-height: 1;
+        }
+
+        .stat-item .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.75);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =====================================================
+         SITE HEADER — logo + company name + slogan  ( phần đâu tiên của page cái chỗ lego )
+         ===================================================== -->
+    <header class="site-header">
+        <a href="index.html" class="logo-link" aria-label="Pixelore Studio home">
+            <img src="images/logo.svg" alt="Pixelore Studio logo — purple diamond pixel icon with company name">
+        </a>
+        <!-- Inline CSS example (required by assignment) -->
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; font-style: italic; margin: 0;">
+            Where creativity meets code.
+        </p>
+    </header>
+
+    <!-- =====================================================
+         NAVIGATION — identical on ALL 4 pages
+         Copy this <nav> block unchanged to jobs, apply, about
+         ===================================================== -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main>
+
+        <!-- HERO SECTION
+             Background-image set via CSS (.hero rule in styles.css)
+             NOT using <img> tag — satisfies assignment requirement -->
+        <section class="hero" aria-label="Hero banner">
+            <div class="hero-content">
+                <span class="hero-badge">Creative Digital Media Agency</span>
+                <h1>Pixelore Studio</h1>
+                <p class="hero-slogan">"Where creativity meets code."</p>
+                <p class="hero-description">
+                    We design stunning digital experiences, build front-end products,
+                    and help brands tell their stories through pixel-perfect design and
+                    cutting-edge web development.
+                </p>
+
+
+            </div>
+        </section>
+
+        <!-- COMPANY STATS BAR -->
+        <div class="stats-bar" aria-label="Company statistics">
+            <div class="stat-item">
+                <span class="stat-number">12+</span>
+                <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Years in Industry</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Team Members</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+        </div>
+
+        <!-- ABOUT THE COMPANY -->
+        <section aria-labelledby="about-heading">
+            <div class="company-section">
+                <!-- Company image (required: at least 1 <img> on index.html) -->
+                <img
+                    src="images/studio-team.jpg"
+                    alt="Pixelore Studio creative team collaborating on a digital design project in a modern open-plan office"
+                    width="440"
+                    height="330"
+                    loading="lazy"
+                >
+                <div class="company-text">
+                    <h2 id="about-heading">Who We Are</h2>
+                    <p>
+                        Pixelore Studio is a digital media agency in Melbourne. We help
+                        businesses build websites, design their brand, and tell their story
+                        online. Since 2026, our team has grown to 4 designers, developers,
+                        and strategists. We are hiring new team members for our current
+                        projects. <a href="jobs.html">View open positions &rarr;</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES TABLE
+             Uses colspan (header row) AND rowspan (category column)
+             Satisfies: "table using cell merging — colspan or rowspan must be used meaningfully" -->
+        <section class="services-section" aria-labelledby="services-heading">
+            <div class="section-container">
+                <h2 id="services-heading" class="section-title">Our Services</h2>
+
+                <div class="table-wrapper">
+                    <table aria-label="Pixelore Studio services overview">
+                        <caption>Pixelore Studio — Service Offerings &amp; Pricing Guide</caption>
+                        <thead>
+                            <!-- colspan="4": single header cell spanning all 4 columns -->
+                            <tr>
+                                <th colspan="4" scope="colgroup">Creative &amp; Technical Services</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Service</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Starting From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- rowspan="3": "Design" category label spans 3 rows -->
+                            <tr>
+                                <td class="category-cell" rowspan="3" scope="rowgroup">Design</td>
+                                <td>UI/UX Design</td>
+                                <td>User research, wireframes, prototypes, and high-fidelity mockups for web and mobile apps.</td>
+                                <td>AUD $2,500</td>
+                            </tr>
+                            <tr>
+                                <td>Brand Identity</td>
+                                <td>Logo design, colour palette, typography system, and brand style guide.</td>
+                                <td>AUD $1,800</td>
+                            </tr>
+                            <tr>
+                                <td>Motion Graphics</td>
+                                <td>Animated explainer videos, UI micro-animations, and social media content.</td>
+                                <td>AUD $1,200</td>
+                            </tr>
+                            <!-- rowspan="2": "Development" spans 2 rows -->
+                            <tr>
+                                <td class="category-cell" rowspan="2" scope="rowgroup">Development</td>
+                                <td>Front-End Development</td>
+                                <td>Responsive, accessible websites and web applications built to pixel-perfect standards.</td>
+                                <td>AUD $4,000</td>
+                            </tr>
+                            <tr>
+                                <td>CMS &amp; E-Commerce</td>
+                                <td>Custom CMS integration and e-commerce storefronts optimised for conversion.</td>
+                                <td>AUD $3,500</td>
+                            </tr>
+                            <!-- rowspan="2": "Strategy" spans 2 rows -->
+                            <tr>
+                                <td class="category-cell" rowspan="2" scope="rowgroup">Strategy</td>
+                                <td>Digital Strategy</td>
+                                <td>Audience analysis, competitor benchmarking, and go-to-market roadmaps for digital products.</td>
+                                <td>AUD $2,000</td>
+                            </tr>
+                            <tr>
+                                <td>SEO &amp; Analytics</td>
+                                <td>Technical SEO audits, performance optimisation, and ongoing analytics reporting.</td>
+                                <td>AUD $900/mo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY JOIN US (additional content for richness) -->
+        <section class="section-padded" aria-labelledby="join-heading">
+            <div class="section-container">
+                <h2 id="join-heading" class="section-title">Why Join Pixelore Studio?</h2>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+                    <div style="flex: 1; min-width: 220px; max-width: 300px; text-align: center; padding: 1.5rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(45,27,105,0.08);">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">&#127775;</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Creative Culture</h3>
+                        <p style="font-size: 0.9rem; color: #555577;">Work alongside talented designers and engineers in a studio that celebrates bold ideas.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 220px; max-width: 300px; text-align: center; padding: 1.5rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(45,27,105,0.08);">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">&#128640;</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Career Growth</h3>
+                        <p style="font-size: 0.9rem; color: #555577;">Structured mentorship, professional development budget, and a clear progression pathway.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 220px; max-width: 300px; text-align: center; padding: 1.5rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(45,27,105,0.08);">
+                        <p style="font-size: 2rem; margin-bottom: 0.5rem;">&#9876;&#65039;</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Flexible Work</h3>
+                        <p style="font-size: 0.9rem; color: #555577;">Hybrid remote model, flexible hours, and a results-focused environment.</p>
+                    </div>
+                </div>
+                <p class="text-center mt-2">
+                    <a href="jobs.html" style="display: inline-block; padding: 0.75rem 2rem; background-color: #2D1B69; color: #fff; border-radius: 6px; font-weight: 700;">
+                        View Open Positions
+                    </a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER — Jira + GitHub + email (all 3 required)
+         ===================================================== -->
+    <footer class="site-footer" role="contentinfo">
+
+        <!-- ACKNOWLEDGEMENT OF COUNTRY
+             Contextual explanation required — NOT decorative -->
+        <section class="footer-acknowledgement" aria-label="Acknowledgement of Country">
+            <h3>Acknowledgement of Country</h3>
+            <p>
+                Pixelore Studio acknowledges the Traditional Custodians of the lands across
+                Australia on which our team members live and work. We pay our deepest respects
+                to Elders past, present, and emerging, and recognise their continuing connection
+                to land, waters, and culture.
+            </p>
+            <p>
+                This acknowledgement is not a formality — it reflects our genuine commitment to
+                reconciliation. As a company that builds digital products that reach Australian
+                communities, we believe it is important to recognise the world's oldest living
+                cultures and the ongoing role of First Nations peoples in shaping this country.
+                We are committed to creating inclusive workplaces and digital spaces for everyone.
+            </p>
+        </section>
+
+        <!-- FOOTER LINKS — all 3 required: Jira + GitHub + email -->
+        <nav class="footer-links" aria-label="Footer links">
+            <!-- Replace # with actual Jira URL once Member B sets up the board -->
+            <a href="#" aria-label="Visit our Jira project board">
+                &#128203; Jira Project Board
+            </a>
+            <!-- Replace # with actual GitHub repository URL -->
+            <a href="#" aria-label="Visit our GitHub repository">
+                &#128025; GitHub Repository
+            </a>
+            <a href="mailto:hello@pixelorestudio.com" aria-label="Email Pixelore Studio">
+            &#9993; hello@pixelorestudio.com
+            </a>
+        </nav>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pixelore Studio. All rights reserved. | COS10026 Group Project</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
