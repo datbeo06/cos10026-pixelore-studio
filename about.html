@@ -2,16 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us — Pixelore Studio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Embedded CSS placeholder — Member D replaces/extends this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css">
+
     <style>
-        /* Member D: add your page-specific embedded CSS here */
+        .site-header .logo-link {
+            display: none;
+        }
+        
+        .site-header {
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .about-header-title {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+        
+        /* Responsive header font size */
+        @media (max-width: 700px) {
+            .about-header-title {
+                font-size: 1.6rem;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header with centered "About Us" heading -->
     <header class="site-header">
         <a href="index.html" class="logo-link" aria-label="Pixelore Studio home">
             <img src="images/logo.svg" alt="Pixelore Studio logo">
@@ -19,7 +42,7 @@
         <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; font-style: italic; margin: 0;">Where creativity meets code.</p>
     </header>
 
-    <!-- NAVIGATION — identical on ALL 4 pages -->
+    <!-- NAVIGATION — identical on all 4 pages -->
     <nav class="site-nav" aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -30,28 +53,136 @@
     </nav>
 
     <main>
-        <section class="section-padded">
-            <div class="section-container">
-                <h1>About Our Team</h1>
-                <p>
-                    <em>This page is being built by Member D. Content coming soon.</em><br>
-                    Member D: build this page with group name + class day/time in a nested list,
-                    member contributions using &lt;dl&gt;/&lt;dt&gt;/&lt;dd&gt;, multi-language quotes,
-                    group photo in &lt;figure&gt;+&lt;figcaption&gt;, and a Fun Facts table with hover effects.
-                </p>
-            </div>
-        </section>
+        <div class="section-container" style="padding: 2rem 1.5rem 3rem;">
+            
+            <!-- 1. TEAM IDENTITY, GROUP NAME + CLASS DAY/TIME using NESTED LIST -->
+            <section class="about-section">
+                <div class="team-intro-card">
+                    <h2 style="margin-top: 0;">Team Identity</h2>
+                    <!-- Nested list requirement -->
+                    <ul>
+                        <li><strong>Class day and time:</strong> 
+                            <ul>
+                                <li>Wednesday Lab: 14:30 – 17:30</li>
+                                <li>Friday team sync: 11:00 (Discord)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Industry:</strong> Creative Digital Media Agency</li>
+                        <li><strong>Project:</strong> Recruitment website for design agency</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 2. MEMBER CONTRIBUTIONS & QUOTES using DEFINITION LIST <dl> -->
+            <section class="about-section">
+                <h2>Meet the Team</h2>
+                <p>Each member independently developed one complete HTML page including its CSS. Below are individual contributions and personal quotes in native languages with English translation.</p>
+                
+                <!-- Definition list (dl/dt/dd) -->
+                <dl class="contrib-definition-list">
+                    <!-- Member A -->
+                    <dt>Member A – Dong Danh Dat Nguyen (105928000)</dt>
+                    <dd>
+                        <strong>Role:</strong> Home Page &amp; Infrastructure. Built index.html with table merge, search bar, background image, Acknowledgement of Country, and global CSS foundation.<br>
+                        <span class="member-quote">"được đây"</span>
+                        <span class="quote-translation">Translation: "Nice"</span>
+                    </dd>
+                    
+                    <!-- Member B -->
+                    <dt>Member B – James Magiatzis (105901030)</dt>
+                    <dd>
+                        <strong>Role:</strong> Jobs Page &amp; Project Management. Developed jobs.html with two detailed job profiles, ordered/unordered lists, floated aside element, and Jira workflow configuration.<br>
+                        <span class="member-quote">"Γειά σου τι κανεις"</span>
+                        <span class="quote-translation">Translation: "How are you."</span>
+                    </dd>
+                    
+                    <!-- Member C -->
+                    <dt>Member C – Marksamuel Someth (105920006)</dt>
+                    <dd>
+                        <strong>Role:</strong> Job Application Page (Forms &amp; Validation). Built apply.html with full HTML5 validation patterns for job reference, date of birth, phone number, postcode, Flexbox layout, and test submission.<br>
+                        <span class="member-quote">"Suostei"</span>
+                        <span class="quote-translation">Translation: "Hello"</span>
+                    </dd>
+                    
+                    <!-- Member D -->
+                    <dt>Member D – Jose Leonardo Vergara (103641855)</dt>
+                    <dd>
+                        <strong>Role:</strong> About Us Page &amp; Quality Assurance. Built about.html with nested list, definition list, group photo figure, fun facts table, performed W3C validation, final ZIP packaging, and ensured live site integrity.<br>
+                        <span class="member-quote">"La calidad nunca es un accidente"</span>
+                        <span class="quote-translation">Translation: "Quality is never an accident."</span>
+                    </dd>
+                </dl>
+            </section>
+
+            <!-- ===== 3. GROUP PHOTO inside <figure> + <figcaption> ===== -->
+            <section class="about-section">
+                <h2>Our Team Photo</h2>
+                <div class="team-grid">
+                    <figure class="group-photo-figure">
+                        <!-- TODO: Replace with actual group photo (all 4 members, <300KB) -->
+                        <img src="images/group-photo.jpg" alt="team photo">
+                        <figcaption>Agency creative team - April 2026</figcaption>
+                    </figure>
+                    <div>
+                        <p><strong>About our agency:</strong> We are a team of front-end developers and designers committed to building accessible, responsive, and visually engaging web experiences.</p>
+                        <p><strong>Collaboration:</strong> We used GitHub for version control with pull request reviews, and Jira for sprint planning across two sprints.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. FUN FACTS TABLE -->
+            <section class="about-section">
+                <h2>Fun Facts About the Team</h2>
+                <div class="table-responsive">
+                    <table class="fun-facts-table">
+                    <caption>Learn About Our Team</caption>
+                        <thead>
+                            <tr>
+                                <th>Member</th>
+                                <th>Hidden Talent</th>
+                                <th>Favourite Tool</th>
+                                <th>Fun Fact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Duong Danh Dat (Member A)</strong><br>(105928000)</td>
+                                <td>Japanese calligraphy</td>
+                                <td>CSS Grid + Figma</td>
+                                <td>Enjoys AI and AI development</td>
+                            </tr>
+                            <tr>
+                                <td><strong>James (Member B)</strong><br>(105901030)</td>
+                                <td>Baking</td>
+                                <td>Jira + VS Code</td>
+                                <td>Learning new languages</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marksamuel (Member C)</strong><br>(105920006)</td>
+                                <td>Playing guitar</td>
+                                <td>Chrome DevTools</td>
+                                <td>Playing soccer</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Jose Leonardo (Member D)</strong><br>(103641855)</td>
+                                <td>Playing drums</td>
+                                <td>Visual Studio</td>
+                                <td>Bilingual</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-        <nav class="footer-links" aria-label="Footer links">
-            <a href="#" aria-label="Visit our Jira project board">&#128203; Jira Project Board</a>
-            <a href="#" aria-label="Visit our GitHub repository">&#128025; GitHub Repository</a>
-            <a href="mailto:hello@pixelorestudio.com" aria-label="Email Pixelore Studio">&#9993; hello@pixelorestudio.com</a>
-        </nav>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pixelore Studio. All rights reserved. | COS10026 Group Project</p>
-        </div>
+    <!-- FOOTER - white text, centered, 5 lines as specified -->
+    <footer class="about-footer">
+        <p>&copy; 2026 Creative Digital Media Agency</p>
+        <p>Email: <a href="mailto:info@creativemedia.com">info@creativemedia.com</a></p>
+        <p>GitHub: <a href="#">your-link-here</a></p>
+        <p>Jira: <a href="#">your-link-here</a></p>
+        <p>We acknowledge the Traditional Owners of the land and pay our respects to Elders past, present and emerging.</p>
     </footer>
 
 </body>
