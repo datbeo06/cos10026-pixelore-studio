@@ -121,6 +121,14 @@ nav a:focus {
     text-decoration: none;
 }
 
+nav ul li a.active {
+    background-color: var(--accent-dark);
+    color: var(--white);
+border-bottom: 3px solid var(--accent);
+
+
+}
+
 /* Main Content Layout */
 .content-container {
     max-width: 1150px;
