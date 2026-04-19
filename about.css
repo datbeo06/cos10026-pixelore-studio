@@ -38,7 +38,7 @@ body {
 
 main { flex: 1; }
 
-img { max-width: 25%; height: auto; display: block; } /* responsive imaging */
+img { max-width: 100%; height: auto; display: block; } /* responsive imaging */
 
 a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
 
@@ -179,6 +179,8 @@ nav.site-nav ul li a.active {
     padding: 0.4rem;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     margin: 0;
+    max-width: 400px;
+    width: 100%
 }
 .group-photo-figure img { border-radius: 12px; }
 figcaption {
