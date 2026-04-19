@@ -473,3 +473,301 @@ table tbody td:first-child {
     letter-spacing: 0.06em;
     border-right: 3px solid var(--accent);
 }
+
+/* ----------------------------------------------------------
+   12. JOBS.HTML — ASIDE ELEMENT
+   ---------------------------------------------------------- */
+aside {
+    float: right;
+    width: 25%;
+    margin: 0 0 1.5rem 2rem;
+    padding: 1.25rem;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    background-color: var(--bg-section);
+    font-size: 0.9rem;
+}
+
+aside h3 {
+    font-size: 1rem;
+    color: var(--accent-dark);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+/* Clearfix for aside float */
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ----------------------------------------------------------
+   13. ABOUT.HTML — STUDENT ID STYLES
+   ---------------------------------------------------------- */
+.student-id {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+    border: 1px solid var(--accent);
+    margin-left: 0.5rem;
+}
+
+/* ----------------------------------------------------------
+   14. ABOUT.HTML — FIGURE (group photo)
+   ---------------------------------------------------------- */
+figure {
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 100%;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+figcaption {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ----------------------------------------------------------
+   15. ABOUT.HTML — FUN FACTS TABLE with hover effects
+   ---------------------------------------------------------- */
+.fun-facts-table tbody tr:hover {
+    background-color: #EDE9FE;   /* hex colour required */
+}
+
+.fun-facts-table thead tr {
+    background-color: #2D1B69;   /* hex colour — same as --primary */
+}
+
+.fun-facts-table tbody tr:nth-child(even) {
+    background-color: #F5F3FF;   /* hex colour */
+}
+
+/* ----------------------------------------------------------
+   16. APPLY.HTML — FORM LAYOUT (Flexbox)
+   ---------------------------------------------------------- */
+.application-form {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px var(--shadow);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.application-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+.application-form input[type="text"],
+.application-form input[type="email"],
+.application-form input[type="search"],
+.application-form select,
+.application-form textarea {
+    padding: 0.6rem 0.9rem;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--text);
+    background-color: var(--bg);
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+    border-color: var(--accent);
+    background-color: var(--white);
+    outline: none;
+}
+
+.application-form fieldset {
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.application-form legend {
+    font-weight: 600;
+    color: var(--primary);
+    padding: 0 0.4rem;
+    font-size: 0.9rem;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin-top: 0.4rem;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
+    letter-spacing: 0.03em;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background-color: var(--accent-dark);
+}
+
+/* ----------------------------------------------------------
+   17. UTILITY CLASSES
+   ---------------------------------------------------------- */
+.text-center { text-align: center; }
+.text-accent  { color: var(--accent); }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+/* ----------------------------------------------------------
+   18. RESPONSIVE — MEDIA QUERIES
+   ---------------------------------------------------------- */
+
+/* Tablet (≤ 900px) */
+@media (max-width: 900px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+
+    .hero h1 { font-size: 2.4rem; }
+
+    .company-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .company-section img {
+        max-width: 100%;
+    }
+
+    aside {
+        float: none;
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.35rem; }
+
+    .site-header {
+        padding: 0.75rem 1rem;
+    }
+
+    nav.site-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav.site-nav ul li a {
+        padding: 0.75rem 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+    }
+
+    .hero {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .hero h1 { font-size: 1.9rem; }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 1rem;
+    }
+
+    .search-form input[type="search"] {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    .search-form button {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .section-padded {
+        padding: 2rem 1rem;
+    }
+
+    .application-form {
+        padding: 1.5rem 1rem;
+    }
+
+    table { font-size: 0.85rem; }
+    table thead th, table tbody td { padding: 0.6rem 0.7rem; }
+}
+
+/* Apply page intro box */
+.apply-intro {
+    background-color: #F3F0FF;   /* same light grey/purple as team */
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid #A855F7;
+    margin-bottom: 2rem;
+}
