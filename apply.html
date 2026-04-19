@@ -4,56 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply — Pixelore Studio</title>
+
+    <!-- USE TEAM CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Embedded CSS placeholder — Member C replaces/extends this -->
-    <style>
-        /* Member C: add your page-specific embedded CSS here */
-    </style>
 </head>
+
 <body>
 
-    <header class="site-header">
-        <a href="index.html" class="logo-link" aria-label="Pixelore Studio home">
-            <img src="images/logo.svg" alt="Pixelore Studio logo">
-        </a>
-        <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; font-style: italic; margin: 0;">Where creativity meets code.</p>
-    </header>
+<header class="site-header">
+    <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="Pixelore Studio logo">
+    </a>
+    <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; font-style: italic; margin: 0;">
+        Where creativity meets code.
+    </p>
+</header>
 
-    <!-- NAVIGATION — identical on ALL 4 pages -->
-    <nav class="site-nav" aria-label="Main navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="apply.html" class="active" aria-current="page">Apply</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
+<nav class="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="apply.html" class="active">Apply</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+</nav>
+
+<main>
+<section class="section-padded">
+<div class="section-container">
+
+<h1>Job Application</h1>
+
+<!-- GREY BOX INTRO (uses team style) -->
+<section class="apply-intro section-tinted" style="padding:20px; border-radius:8px;">
+    <p>
+    Please complete the application form below to apply for a position at Pixelore Studio. 
+    We are looking for creative and motivated individuals who are passionate about digital design and development.
+    </p>
+
+    <p>
+    Select the job you are applying for from the list below. 
+    All required fields must be completed before submitting your application.
+    </p>
+
+    <p>
+    Make sure your details are accurate. Invalid or incomplete submissions may not be accepted.
+    </p>
+</section>
+
+<!-- FORM USES TEAM CSS -->
+<form class="application-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+
+<div class="form-group">
+<label for="jobRef">Select Job Position:</label>
+<select id="jobRef" name="jobRef" required
+        oninvalid="this.setCustomValidity('Please select a job position')"
+        oninput="this.setCustomValidity('')">
+    <option value="">-- Select a Job --</option>
+    <option value="FE101">Front-End Web Developer (FE101)</option>
+    <option value="UX202">UI/UX Designer (UX202)</option>
+</select>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="fname">First Name:</label>
+<input type="text" id="fname" name="fname" required 
+       pattern="[A-Za-z\s]{1,20}" maxlength="20"
+       oninvalid="this.setCustomValidity('Only letters allowed, max 20 characters')"
+       oninput="this.setCustomValidity('')">
+</div>
+
+<div class="form-group">
+<label for="lname">Last Name:</label>
+<input type="text" id="lname" name="lname" required 
+       pattern="[A-Za-z\s]{1,20}" maxlength="20"
+       oninvalid="this.setCustomValidity('Only letters allowed, max 20 characters')"
+       oninput="this.setCustomValidity('')">
+</div>
+</div>
+
+<div class="form-group">
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required
+       oninvalid="this.setCustomValidity('Enter a valid date (no future dates)')"
+       oninput="this.setCustomValidity('')">
+</div>
+
+<fieldset>
+    <legend>Gender</legend>
+    <div class="radio-group">
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+</fieldset>
+
+<div class="form-group">
+<label for="street">Street Address:</label>
+<input type="text" id="street" name="street" maxlength="40" required>
+</div>
+
+<div class="form-group">
+<label for="suburb">Suburb/Town:</label>
+<input type="text" id="suburb" name="suburb" maxlength="40" required>
+</div>
+
+<div class="form-group">
+<label for="state">State:</label>
+<select id="state" name="state" required
+        oninvalid="this.setCustomValidity('Please select a state')"
+        oninput="this.setCustomValidity('')">
+    <option value="">Select</option>
+    <option value="VIC">VIC</option>
+    <option value="NSW">NSW</option>
+    <option value="QLD">QLD</option>
+    <option value="NT">NT</option>
+    <option value="WA">WA</option>
+    <option value="SA">SA</option>
+    <option value="TAS">TAS</option>
+    <option value="ACT">ACT</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="postcode">Postcode:</label>
+<input type="text" id="postcode" name="postcode" required 
+       pattern="\d{4}" maxlength="4"
+       oninvalid="this.setCustomValidity('Enter a valid 4 digit postcode')"
+       oninput="this.setCustomValidity('')">
+</div>
+
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required
+       oninvalid="this.setCustomValidity('Enter a valid email')"
+       oninput="this.setCustomValidity('')">
+</div>
+
+<div class="form-group">
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone" required 
+       pattern="\d{8,12}" maxlength="12"
+       oninvalid="this.setCustomValidity('Enter 8–12 digit phone number')"
+       oninput="this.setCustomValidity('')">
+</div>
+
+<div class="form-group">
+<p>Skills:</p>
+<div class="checkbox-group">
+<label><input type="checkbox" name="skills" value="html"> HTML</label>
+<label><input type="checkbox" name="skills" value="css"> CSS</label>
+<label><input type="checkbox" name="skills" value="design"> Design</label>
+</div>
+</div>
+
+<div class="form-group">
+<label for="other">Other Skills:</label>
+<textarea id="other" name="other"></textarea>
+</div>
+
+<div class="form-group">
+<label for="experience">Brief Experience:</label>
+<textarea id="experience" name="experience" placeholder="Tell us about your experience..."></textarea>
+</div>
+
+<div class="form-group">
+<label for="resume">Upload Resume:</label>
+<input type="file" id="resume" name="resume" accept=".pdf">
+</div>
+
+<p><small>Note: Resume upload may not be processed in this demo.</small></p>
+
+<button type="submit" class="btn-submit">Apply</button>
+<button type="reset" class="btn-submit">Reset</button>
+
+</form>
+
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <nav class="footer-links">
+        <a href="#">📋 Jira Project Board</a>
+        <a href="#">🐙 GitHub Repository</a>
+        <a href="mailto:hello@pixelorestudio.com">✉️ hello@pixelorestudio.com</a>
     </nav>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Pixelore Studio. All rights reserved.</p>
+    </div>
+</footer>
 
-    <main>
-        <section class="section-padded">
-            <div class="section-container">
-                <h1>Job Application</h1>
-                <p>
-                    <em>This page is being built by Member C. Content coming soon.</em><br>
-                    Member C: build this page with a POST form to
-                    https://mercury.swin.edu.au/it000000/formtest.php,
-                    all required fields with HTML5 pattern validation,
-                    fieldset/legend for gender, Flexbox layout.
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-        <nav class="footer-links" aria-label="Footer links">
-            <a href="#" aria-label="Visit our Jira project board">&#128203; Jira Project Board</a>
-            <a href="#" aria-label="Visit our GitHub repository">&#128025; GitHub Repository</a>
-            <a href="mailto:hello@pixelorestudio.com" aria-label="Email Pixelore Studio">&#9993; hello@pixelorestudio.com</a>
-        </nav>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Pixelore Studio. All rights reserved. | COS10026 Group Project</p>
-        </div>
-    </footer>
+<script>
+window.onload = function() {
+    document.getElementById("dob").max = new Date().toISOString().split("T")[0];
+};
+</script>
 
 </body>
 </html>
