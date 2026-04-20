@@ -1,4 +1,4 @@
- /* about-styles.css — Pixelore Studio | About Us page only */
+ /* about.css — Pixelore Studio | About Us page only */
 
 /* Variables & Reset */
 :root {
@@ -38,7 +38,7 @@ body {
 
 main { flex: 1; }
 
-img { max-width: 100%; height: auto; display: block; } /* responsive imaging */
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
 
