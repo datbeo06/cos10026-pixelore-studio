@@ -566,116 +566,6 @@ figcaption {
 }
 
 /* ----------------------------------------------------------
-   16. APPLY.HTML — FORM LAYOUT (Flexbox)
-   ---------------------------------------------------------- */
-.application-form {
-    max-width: 720px;
-    margin: 0 auto;
-    background-color: var(--white);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px var(--shadow);
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    margin-bottom: 1.25rem;
-}
-
-.form-row {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.form-row .form-group {
-    flex: 1;
-    min-width: 200px;
-}
-
-.application-form label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--primary);
-}
-
-.application-form input[type="text"],
-.application-form input[type="email"],
-.application-form input[type="search"],
-.application-form select,
-.application-form textarea {
-    padding: 0.6rem 0.9rem;
-    border: 1.5px solid var(--border);
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-family: inherit;
-    color: var(--text);
-    background-color: var(--bg);
-    transition: border-color 0.2s ease;
-    width: 100%;
-}
-
-.application-form input:focus,
-.application-form select:focus,
-.application-form textarea:focus {
-    border-color: var(--accent);
-    background-color: var(--white);
-    outline: none;
-}
-
-.application-form fieldset {
-    border: 1.5px solid var(--border);
-    border-radius: 6px;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1.25rem;
-}
-
-.application-form legend {
-    font-weight: 600;
-    color: var(--primary);
-    padding: 0 0.4rem;
-    font-size: 0.9rem;
-}
-
-.radio-group, .checkbox-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1.5rem;
-    margin-top: 0.4rem;
-}
-
-.radio-group label, .checkbox-group label {
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-}
-
-.btn-submit {
-    display: block;
-    width: 100%;
-    padding: 0.85rem;
-    background-color: var(--primary);
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 700;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.2s ease;
-    letter-spacing: 0.03em;
-}
-
-.btn-submit:hover,
-.btn-submit:focus {
-    background-color: var(--accent-dark);
-}
-
-/* ----------------------------------------------------------
    17. UTILITY CLASSES
    ---------------------------------------------------------- */
 .text-center { text-align: center; }
@@ -764,19 +654,7 @@ figcaption {
         padding: 2rem 1rem;
     }
 
-    .application-form {
-        padding: 1.5rem 1rem;
-    }
-
     table { font-size: 0.85rem; }
     table thead th, table tbody td { padding: 0.6rem 0.7rem; }
 }
 
-/* Apply page intro box */
-.apply-intro {
-    background-color: #F3F0FF;   /* same light grey/purple as team */
-    padding: 1.5rem;
-    border-radius: 10px;
-    border-left: 5px solid #A855F7;
-    margin-bottom: 2rem;
-}
