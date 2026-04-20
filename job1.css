@@ -88,10 +88,9 @@ li { margin-bottom: 0.4rem; }
 
 
 nav.site-nav {
-    background: #2D1B69;
+    background: var(--primary);
     border-top: 1px solid rgba(168, 85, 247, 0.3);
 }
-
 nav.site-nav ul {
     list-style: none;
     padding: 0;
@@ -99,34 +98,23 @@ nav.site-nav ul {
     display: flex;
     justify-content: center;
 }
-
-nav.site-nav li {
-    margin: 0;
-}
-
-nav.site-nav a {
+nav.site-nav ul li a {
     display: block;
-    color: #fff;
-    padding: 13.6px 28px;
+    color: var(--white);
+    padding: 0.85rem 1.75rem;
     font-weight: 600;
-    font-size: 15.2px;
-    text-decoration: none;
+    font-size: 0.95rem;
     transition: background 0.2s ease;
 }
-
-nav.site-nav a:hover,
-nav.site-nav a:focus {
-    background: #A855F7;
-    color: #fff;
+nav.site-nav ul li a:hover,
+nav.site-nav ul li a:focus {
+    background: var(--accent);
+    color: var(--white);
     text-decoration: none;
 }
-
 nav.site-nav ul li a.active {
-    background-color: var(--accent-dark);
-    color: var(--white);
-border-bottom: 3px solid var(--accent);
-
-
+    background: var(--accent-dark);
+    border-bottom: 3px solid var(--accent);
 }
 
 /* Main Content Layout */
@@ -216,6 +204,72 @@ border-bottom: 3px solid var(--accent);
     color: #2f1b73;
 }
 
+footer.site-footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 2.5rem 1.5rem 1.5rem;
+    margin-top: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    color: var(--white);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--white);
+    border-top: 1px solid rgba(168, 85, 247, 0.3);
+    padding-top: 1rem;
+}
+
+.footer-acknowledgement {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(168, 85, 247, 0.1);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9rem;
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.footer-acknowledgement p {
+    color: var(--white);
+}
+
+.footer-acknowledgement h2 {
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
 
 /* Accessibility / Focus */
 a:focus,
