@@ -42,20 +42,22 @@ body {
     font-weight: 600;
 }
 
-/* ✅ ONLY CHANGE: taller active tab */
+
 .site-nav a.active {
     background-color: #7C3AED;
     padding-top: 1.05rem;
     padding-bottom: 1.05rem;
 }
 
-/* purple strip under nav */
+
 .site-nav::after {
     content: "";
     display: block;
     height: 6px;
     background-color: #2D1B69;
 }
+
+
 
 /* --- Layout --- */
 .section-container {
