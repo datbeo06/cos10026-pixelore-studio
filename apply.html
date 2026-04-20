@@ -15,9 +15,7 @@
     <a href="index.html" class="logo-link" aria-label="Pixelore Studio home">
         <img src="images/logo.svg" alt="Pixelore Studio logo">
     </a>
-    <p class="tagline">
-        Where creativity meets code.
-    </p>
+    <p class="tagline">Where creativity meets code.</p>
 </header>
 
 <nav class="site-nav" aria-label="Main navigation">
@@ -58,30 +56,23 @@
 <div class="form-group">
 <label for="jobRef">Job Reference Number:</label>
 <input type="text" id="jobRef" name="jobRef" required 
-       pattern="[A-Za-z0-9]{5}" maxlength="5"
-       oninvalid="this.setCustomValidity('Enter exactly 5 letters/numbers')"
-       oninput="this.setCustomValidity('')">
+       pattern="[A-Za-z0-9]{5}" maxlength="5">
 </div>
 
 <div class="form-row">
 <div class="form-group">
 <label for="fname">First Name:</label>
 <input type="text" id="fname" name="fname" required 
-       pattern="[A-Za-z\s]{1,20}" maxlength="20"
-       oninvalid="this.setCustomValidity('Only letters allowed, max 20 characters')"
-       oninput="this.setCustomValidity('')">
+       pattern="[A-Za-z\s]{1,20}" maxlength="20">
 </div>
 
 <div class="form-group">
 <label for="lname">Last Name:</label>
 <input type="text" id="lname" name="lname" required 
-       pattern="[A-Za-z\s]{1,20}" maxlength="20"
-       oninvalid="this.setCustomValidity('Only letters allowed, max 20 characters')"
-       oninput="this.setCustomValidity('')">
+       pattern="[A-Za-z\s]{1,20}" maxlength="20">
 </div>
 </div>
 
-<!-- ✅ FIXED: calendar picker + no future dates -->
 <div class="form-group">
 <label for="dob">Date of Birth:</label>
 <input type="date" id="dob" name="dob" required max="2026-04-20">
@@ -108,9 +99,7 @@
 
 <div class="form-group">
 <label for="state">State:</label>
-<select id="state" name="state" required
-        oninvalid="this.setCustomValidity('Please select a state')"
-        oninput="this.setCustomValidity('')">
+<select id="state" name="state" required>
     <option value="">Select</option>
     <option value="VIC">VIC</option>
     <option value="NSW">NSW</option>
@@ -126,30 +115,24 @@
 <div class="form-group">
 <label for="postcode">Postcode:</label>
 <input type="text" id="postcode" name="postcode" required 
-       pattern="\d{4}" maxlength="4"
-       oninvalid="this.setCustomValidity('Enter a valid 4 digit postcode')"
-       oninput="this.setCustomValidity('')">
+       pattern="\d{4}" maxlength="4">
 </div>
 
 <div class="form-group">
 <label for="email">Email:</label>
-<input type="email" id="email" name="email" required
-       oninvalid="this.setCustomValidity('Enter a valid email')"
-       oninput="this.setCustomValidity('')">
+<input type="email" id="email" name="email" required>
 </div>
 
 <div class="form-group">
 <label for="phone">Phone Number:</label>
 <input type="tel" id="phone" name="phone" required 
-       pattern="\d{8,12}" maxlength="12"
-       oninvalid="this.setCustomValidity('Enter 8–12 digit phone number')"
-       oninput="this.setCustomValidity('')">
+       pattern="\d{8,12}" maxlength="12">
 </div>
 
 <div class="form-group">
 <p>Skills:</p>
 <div class="checkbox-group">
-<label><input type="checkbox" name="skills" value="html" required> HTML</label>
+<label><input type="checkbox" name="skills" value="html"> HTML</label>
 <label><input type="checkbox" name="skills" value="css"> CSS</label>
 <label><input type="checkbox" name="skills" value="design"> Design</label>
 </div>

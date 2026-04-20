@@ -12,7 +12,7 @@ body {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* ✅ FIXED (was breaking your text) */
+    justify-content: flex-start; 
     gap: 1rem;
 }
 
@@ -20,7 +20,7 @@ body {
     height: 44px;
 }
 
-/* ✅ EXACT match to your friend's text */
+
 .tagline {
     color: rgba(255,255,255,0.7);
     font-size: 0.85rem;
