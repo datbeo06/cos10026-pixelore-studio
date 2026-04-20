@@ -222,7 +222,7 @@ footer.site-footer {
 }
 
 .footer-links a {
-    color: var(--accent);
+    color: var(--white);
     font-weight: 600;
     font-size: 0.9rem;
     display: flex;
@@ -237,10 +237,14 @@ footer.site-footer {
     text-decoration: underline;
 }
 
+.footer-bottom p {
+    color: var(--white);
+}
+
 .footer-bottom {
     text-align: center;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.65);
+    color: var(--white);
     border-top: 1px solid rgba(168, 85, 247, 0.3);
     padding-top: 1rem;
 }
@@ -253,12 +257,16 @@ footer.site-footer {
     border-left: 4px solid var(--accent);
     border-radius: 0 6px 6px 0;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--white);
     line-height: 1.6;
 }
 
+.footer-acknowledgement p {
+    color: var(--white);
+}
+
 .footer-acknowledgement h3 {
-    color: var(--accent);
+    color: var(--white);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
