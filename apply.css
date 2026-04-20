@@ -141,40 +141,67 @@ input, select, textarea {
 .site-footer {
     background-color: #2D1B69;
     color: white;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1.5rem 1.5rem;
 }
 
 .footer-acknowledgement {
     max-width: 800px;
     margin: 0 auto 1.5rem;
-    padding: 1.5rem;
-    background-color: rgba(168, 85, 247, 0.12);
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(168, 85, 247, 0.1);
     border-left: 4px solid #A855F7;
-    border-radius: 8px;
-    text-align: center;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footer-acknowledgement p {
+    color: white;
 }
 
 .footer-acknowledgement h3 {
+    color: white;
+    font-size: 0.95rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
 }
 
 .footer-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
 }
 
 .footer-links a {
     color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: white;
+    text-decoration: underline;
 }
 
 .footer-bottom {
     text-align: center;
     font-size: 0.85rem;
+    color: white;
     border-top: 1px solid rgba(168, 85, 247, 0.3);
     padding-top: 1rem;
+}
+
+.footer-bottom p {
+    color: white;
 }
