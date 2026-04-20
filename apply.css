@@ -1,4 +1,4 @@
-
+/* --- Base --- */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #FAFAFA;
@@ -12,11 +12,20 @@ body {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* ✅ FIXED (was breaking your text) */
     gap: 1rem;
 }
 
 .site-header img {
     height: 44px;
+}
+
+/* ✅ EXACT match to your friend's text */
+.tagline {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 0;
 }
 
 /* --- Navigation --- */
@@ -34,7 +43,7 @@ body {
     justify-content: center;
 }
 
-
+/* keep buttons same size */
 .site-nav a {
     color: white;
     padding: 0.85rem 1.75rem;
@@ -42,22 +51,22 @@ body {
     text-decoration: none;
     font-weight: 600;
 
-    
+    /* reserve space for bottom line */
     border-bottom: 3px solid transparent;
 }
 
-
+/* active button */
 .site-nav a.active {
     background-color: #7C3AED;
     border-bottom: 3px solid #A855F7;
 }
 
-
+/* hover */
 .site-nav a:hover {
     background-color: #7C3AED;
 }
 
-
+/* purple gap under nav */
 .site-nav::after {
     content: "";
     display: block;
@@ -137,3 +146,44 @@ input, select, textarea {
     background-color: #7C3AED;
 }
 
+/* --- Footer --- */
+.site-footer {
+    background-color: #2D1B69;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-acknowledgement {
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    padding: 1.5rem;
+    background-color: rgba(168, 85, 247, 0.12);
+    border-left: 4px solid #A855F7;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer-acknowledgement h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(168, 85, 247, 0.3);
+    padding-top: 1rem;
+}
