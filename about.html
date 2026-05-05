@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>About Us</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Meet the SolarCore Energy team — four students from Swinburne University working on the COS10026 Web Technology Project, Group G03 Sustainable Energy Solutions.">
+    <meta name="keywords" content="SolarCore team, COS10026, Swinburne web project, Group G03, renewable energy team, about us">
+    <meta name="author" content="Jose Leonardo Vergara">
+    <title>About Us &mdash; SolarCore Energy</title>
+
+    <link rel="stylesheet" href="styles/style.css">
 
     <style>
         .about-header-title {
@@ -15,8 +18,7 @@
             color: white;
             letter-spacing: -0.5px;
         }
-        
-        
+
         @media (max-width: 700px) {
             .about-header-title {
                 font-size: 1.6rem;
@@ -28,10 +30,10 @@
 
     <!-- Header -->
     <header class="site-header">
-        <a href="index.html" class="logo-link" aria-label="Pixelore Studio home">
-            <img src="images/logo.svg" alt="Pixelore Studio logo">
+        <a href="index.html" class="logo-link" aria-label="SolarCore Energy home">
+            <img src="images/logo.svg" alt="SolarCore Energy logo">
         </a>
-        <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; font-style: italic; margin: 0;">Where creativity meets code.</p>
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; font-style: italic; margin: 0;">Powering tomorrow with clean energy.</p>
     </header>
 
     <!-- NAVIGATION — identical on all 4 pages -->
@@ -46,21 +48,29 @@
 
     <main>
         <div class="section-container" style="padding: 2rem 1.5rem 3rem;">
-            
+
             <!-- TEAM IDENTITY, GROUP NAME + CLASS DAY/TIME -->
             <section class="about-section">
                 <div class="team-intro-card">
-                    <h2 style="margin-top: 0;">Team Identity</h2>
+                    <h2 style="margin-top: 0;">Team Identity &mdash; Group G03</h2>
                     <!-- Nested list requirement -->
                     <ul>
-                        <li><strong>Class day and time:</strong> 
+                        <li><strong>Class:</strong> Nick &mdash; Thursday 10:30 &mdash; Group G03</li>
+                        <li><strong>Class day and time:</strong>
                             <ul>
-                                <li>Wednesday Lab: 14:30 – 17:30</li>
+                                <li>Thursday Lab: 10:30 &mdash; 13:30</li>
                                 <li>Friday team sync: 11:00 (Discord)</li>
                             </ul>
                         </li>
-                        <li><strong>Industry:</strong> Creative Digital Media Agency</li>
-                        <li><strong>Project:</strong> Recruitment website for design agency</li>
+                        <li><strong>Industry:</strong> Renewable Energy (Solar, Wind, Hydro)</li>
+                        <li><strong>Topic:</strong> Sustainable Energy Solutions Company
+                            <ul>
+                                <li>Strengthening the technology team</li>
+                                <li>Promoting clean energy solutions</li>
+                                <li>Public engagement and project information</li>
+                            </ul>
+                        </li>
+                        <li><strong>Project:</strong> Recruitment website for SolarCore Energy</li>
                     </ul>
                 </div>
             </section>
@@ -68,40 +78,56 @@
             <!-- MEMBER CONTRIBUTIONS & QUOTES -->
             <section class="about-section">
                 <h2>Meet the Team</h2>
-                <p>Each member independently developed one complete HTML page including its CSS. Below are individual contributions and personal quotes in native languages with English translation.</p>
-                
+                <p>Each member independently developed one complete page including its CSS. Below are individual contributions and personal quotes in native languages with English translation.</p>
+
                 <!-- Definition list (dl/dt/dd) -->
                 <dl class="contrib-definition-list">
                     <!-- Member A -->
-                    <dt>Member A – Dong Danh Dat Nguyen (105928000)</dt>
+                    <dt>Member A &ndash; Duong Danh Dat Nguyen (105928000)</dt>
                     <dd>
-                        <strong>Role:</strong> Home Page &amp; Infrastructure. Built index.html with table merge, search bar, background image, Acknowledgement of Country, and global CSS foundation.<br>
-                        <span class="member-quote">"được đây"</span>
-                        <span class="quote-translation">Translation: "Nice"</span>
+                        <strong>Role:</strong> Home Page &amp; Infrastructure. Built index.html
+                        with the services table (rowspan/colspan), company stats bar, hero
+                        section with CSS background image, Acknowledgement of Country, and
+                        the global SolarCore CSS foundation. Set up the GitHub repository.<br>
+                        <span class="member-quote">"&#273;&#432;&#7907;c &#273;&acirc;y"</span>
+                        <span class="quote-translation">Vietnamese &mdash; Translation: "Nice / All good"</span>
                     </dd>
-                    
+
                     <!-- Member B -->
-                    <dt>Member B – James Magiatzis (105901030)</dt>
+                    <dt>Member B &ndash; James Magiatzis (105901030)</dt>
                     <dd>
-                        <strong>Role:</strong> Jobs Page &amp; Project Management. Developed jobs.html with two detailed job profiles, ordered/unordered lists, floated aside element, and Jira workflow configuration.<br>
-                        <span class="member-quote">"Γειά σου τι κανεις"</span>
-                        <span class="quote-translation">Translation: "How are you."</span>
+                        <strong>Role:</strong> Jobs Page &amp; Project Management. Developed
+                        jobs.html with two detailed renewable-energy job profiles
+                        (Full-Stack Web Developer WD001 and Solar Systems Engineer SE002),
+                        ordered/unordered lists, the floated "Why Work at SolarCore?" aside
+                        element, and the Jira workflow board configuration.<br>
+                        <span class="member-quote">"&Gamma;&epsilon;&iota;&aacute; &sigma;&omicron;&upsilon; &tau;&iota; &kappa;&alpha;&nu;&epsilon;&iota;&sigmaf;"</span>
+                        <span class="quote-translation">Greek &mdash; Translation: "Hello, how are you?"</span>
                     </dd>
-                    
+
                     <!-- Member C -->
-                    <dt>Member C – Marksamuel Someth (105920006)</dt>
+                    <dt>Member C &ndash; Marksamuel Someth (105920006)</dt>
                     <dd>
-                        <strong>Role:</strong> Job Application Page (Forms &amp; Validation). Built apply.html with full HTML5 validation patterns for job reference, date of birth, phone number, postcode, Flexbox layout, and test submission.<br>
-                        <span class="member-quote">"Suostei"</span>
-                        <span class="quote-translation">Translation: "Hello"</span>
+                        <strong>Role:</strong> Job Application Page (Forms &amp; Validation).
+                        Built apply.html with the Expression of Interest form, eight
+                        skills-checkbox set (PHP, MySQL, HTML5/CSS3, JavaScript, Solar PV,
+                        Electrical Engineering, Project Management, Customer Service),
+                        Flexbox layout, fieldset + legend grouping, and HTML5 patterns for
+                        job reference, postcode, and phone number validation.<br>
+                        <span class="member-quote">"&#6047;&#6075;&#6047;&#6098;&#6021;&#6072;&#6041;"</span>
+                        <span class="quote-translation">Khmer &mdash; Translation: "Hello"</span>
                     </dd>
-                    
+
                     <!-- Member D -->
-                    <dt>Member D – Jose Leonardo Vergara (103641855)</dt>
+                    <dt>Member D &ndash; Jose Leonardo Vergara (103641855)</dt>
                     <dd>
-                        <strong>Role:</strong> About Us Page &amp; Quality Assurance. Built about.html with nested list, definition list, group photo figure, fun facts table, performed W3C validation, final ZIP packaging, and ensured live site integrity.<br>
+                        <strong>Role:</strong> About Us Page &amp; Quality Assurance. Built
+                        about.html with the team intro card, nested lists, definition list of
+                        member contributions, group photo figure with figcaption, fun facts
+                        table, and performed final W3C HTML/CSS validation, accessibility
+                        review, and ZIP packaging for submission.<br>
                         <span class="member-quote">"La calidad nunca es un accidente"</span>
-                        <span class="quote-translation">Translation: "Quality is never an accident."</span>
+                        <span class="quote-translation">Spanish &mdash; Translation: "Quality is never an accident."</span>
                     </dd>
                 </dl>
             </section>
@@ -111,12 +137,12 @@
                 <h2>Our Team Photo</h2>
                 <div class="team-grid">
                     <figure class="group-photo-figure">
-                        <img src="images/team-photo.jpg" alt="team photo">
-                        <figcaption>Agency creative team - April 2026</figcaption>
+                        <img src="images/team-photo.jpg" alt="The four-member SolarCore Energy student team standing together at Swinburne University">
+                        <figcaption>SolarCore Energy team &mdash; Swinburne University, May 2026</figcaption>
                     </figure>
                     <div>
-                        <p><strong>About our agency:</strong> We are a team of front-end developers and designers committed to building accessible, responsive, and visually engaging web experiences.</p>
-                        <p><strong>Collaboration:</strong> We used GitHub for version control with pull request reviews, and Jira for sprint planning across two sprints.</p>
+                        <p><strong>About our company:</strong> SolarCore Energy is a Melbourne-based renewable energy company founded in 2018, delivering solar, wind, and hydro solutions across Australia.</p>
+                        <p><strong>Collaboration:</strong> We use GitHub for version control with pull request reviews, Jira for sprint planning across two sprints, and Discord for daily team communication.</p>
                     </div>
                 </div>
             </section>
@@ -126,7 +152,7 @@
                 <h2>Fun Facts About the Team</h2>
                 <div class="table-responsive">
                     <table class="fun-facts-table">
-                    <caption>Learn About Our Team</caption>
+                    <caption>Learn About Our SolarCore Team</caption>
                         <thead>
                             <tr>
                                 <th>Member</th>
@@ -152,13 +178,13 @@
                                 <td><strong>Marksamuel (Member C)</strong><br>(105920006)</td>
                                 <td>Playing guitar</td>
                                 <td>Chrome DevTools</td>
-                                <td>Playing soccer</td>
+                                <td>Plays soccer on weekends</td>
                             </tr>
                             <tr>
                                 <td><strong>Jose Leonardo (Member D)</strong><br>(103641855)</td>
                                 <td>Playing drums</td>
-                                <td>Visual Studio</td>
-                                <td>Bilingual</td>
+                                <td>Visual Studio Code</td>
+                                <td>Bilingual (Spanish &amp; English)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -171,27 +197,28 @@
         <section class="footer-acknowledgement" aria-label="Acknowledgement of Country">
             <h3>Acknowledgement of Country</h3>
             <p>
-                Pixelore Studio acknowledges the Traditional Custodians of the lands across
-                Australia on which our team members live and work. We pay our deepest respects
-                to Elders past, present, and emerging, and recognise their continuing connection
-                to land, waters, and culture.
+                SolarCore Energy acknowledges the Traditional Custodians of the lands across
+                Australia on which our renewable energy systems are designed, installed, and
+                operated. We recognise that caring for Country has been practised by First
+                Nations peoples for over 65,000 years, and we pay our deepest respects to
+                Elders past, present, and emerging.
             </p>
         </section>
 
         <nav class="footer-links" aria-label="Footer links">
             <a href="https://student-team-webprj.atlassian.net/jira/software/c/projects/PSW/boards/3/backlog" aria-label="Visit our Jira project board" target="_blank" rel="noopener noreferrer">
-                &#128203; Jira
+                <span aria-hidden="true">&#128203;</span> Jira
             </a>
             <a href="https://github.com/datbeo06/cos10026-pixelore-studio" aria-label="Visit our GitHub repository" target="_blank" rel="noopener noreferrer">
-                &#128025; GitHub
+                <span aria-hidden="true">&#128025;</span> GitHub
             </a>
-            <a href="mailto:hello@pixelorestudio.com" aria-label="Email Pixelore Studio">
-                &#9993; hello@pixelorestudio.com
+            <a href="mailto:hello@solarcore.com.au" aria-label="Email SolarCore Energy">
+                <span aria-hidden="true">&#9993;</span> hello@solarcore.com.au
             </a>
         </nav>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Pixelore Studio. All rights reserved. | COS10026 Group Project</p>
+            <p>&copy; 2026 SolarCore Energy. All rights reserved. | COS10026 Group Project</p>
         </div>
     </footer>
 

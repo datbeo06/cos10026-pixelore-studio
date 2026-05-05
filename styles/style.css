@@ -1,23 +1,24 @@
 /* ==========================================================
-   styles.css — Pixelore Studio | COS10026 Group Project
-   Shared external stylesheet for all 4 pages
-   Author: Member A
+   style.css — SolarCore Energy | COS10026 Group Project
+   Single consolidated stylesheet for all 4 pages.
+   Includes: shared base + page-specific rules for index/jobs/apply/about.
    ========================================================== */
 
 /* ----------------------------------------------------------
-   1. CSS CUSTOM PROPERTIES (Colour Palette)
+   1. CSS CUSTOM PROPERTIES (SolarCore Sunrise Palette)
    ---------------------------------------------------------- */
 :root {
-    --primary:      #2D1B69;   /* dark purple */
-    --accent:       #A855F7;   /* bright purple */
-    --accent-dark:  #7C3AED;   /* hover purple */
-    --bg:           #FAFAFA;   /* light background */
-    --bg-section:   #F3F0FF;   /* tinted section bg */
-    --text:         #1a1a2e;   /* main text */
-    --text-light:   #555577;   /* secondary text */
+    --primary:      #0F4C3A;   /* deep forest green */
+    --accent:       #F59E0B;   /* solar gold */
+    --accent-dark:  #D97706;   /* darker gold for hover */
+    --secondary:    #10B981;   /* emerald (links / success) */
+    --bg:           #F9FAFB;   /* off-white background */
+    --bg-section:   #ECFDF5;   /* tinted green section bg */
+    --text:         #1F2937;   /* charcoal body text */
+    --text-light:   #4B5563;   /* secondary text */
     --white:        #ffffff;
-    --border:       #DDD6FE;   /* light purple border */
-    --shadow:       rgba(45, 27, 105, 0.12);
+    --border:       #E5E7EB;   /* light gray border */
+    --shadow:       rgba(15, 76, 58, 0.12);
 }
 
 /* ----------------------------------------------------------
@@ -36,6 +37,10 @@ html {
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: var(--bg);
+    /* Tiled hexagon pattern (solar PV cell motif) — Part 1 feedback fix */
+    background-image: url('images/bg-pattern.svg');
+    background-repeat: repeat;
+    background-attachment: fixed;
     color: var(--text);
     font-size: 16px;
     line-height: 1.7;
@@ -55,7 +60,7 @@ img {
 }
 
 a {
-    color: var(--accent);
+    color: var(--secondary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -125,6 +130,17 @@ li {
 .site-header .logo-link img {
     height: 44px;
     width: auto;
+    background-color: var(--white);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* Header tagline (used as a class alternative to inline style) */
+.tagline {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 0;
 }
 
 /* ----------------------------------------------------------
@@ -132,7 +148,7 @@ li {
    ---------------------------------------------------------- */
 nav.site-nav {
     background-color: var(--primary);
-    border-top: 1px solid rgba(168, 85, 247, 0.3);
+    border-top: 1px solid rgba(245, 158, 11, 0.35);
 }
 
 nav.site-nav ul {
@@ -158,15 +174,15 @@ nav.site-nav ul li a {
 nav.site-nav ul li a:hover,
 nav.site-nav ul li a:focus {
     background-color: var(--accent);
-    color: var(--white);
+    color: var(--primary);
     text-decoration: none;
     outline: none;
 }
 
 nav.site-nav ul li a.active {
-    background-color: var(--accent-dark);
-    color: var(--white);
-    border-bottom: 3px solid var(--accent);
+    background-color: var(--accent);
+    color: var(--primary);
+    border-bottom: 3px solid var(--accent-dark);
 }
 
 /* ----------------------------------------------------------
@@ -233,7 +249,7 @@ footer.site-footer {
 
 .footer-links a:hover,
 .footer-links a:focus {
-    color: var(--white);
+    color: var(--accent);
     text-decoration: underline;
 }
 
@@ -245,7 +261,7 @@ footer.site-footer {
     text-align: center;
     font-size: 0.85rem;
     color: var(--white);
-    border-top: 1px solid rgba(168, 85, 247, 0.3);
+    border-top: 1px solid rgba(245, 158, 11, 0.3);
     padding-top: 1rem;
 }
 
@@ -253,7 +269,7 @@ footer.site-footer {
     max-width: 800px;
     margin: 0 auto 1.5rem;
     padding: 1.25rem 1.5rem;
-    background-color: rgba(168, 85, 247, 0.1);
+    background-color: rgba(245, 158, 11, 0.1);
     border-left: 4px solid var(--accent);
     border-radius: 0 6px 6px 0;
     font-size: 0.9rem;
@@ -266,23 +282,27 @@ footer.site-footer {
     color: var(--white);
 }
 
+.footer-acknowledgement h2,
 .footer-acknowledgement h3 {
-    color: var(--white);
+    color: var(--accent);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
 
+/* ==========================================================
+   PAGE-SPECIFIC RULES
+   ========================================================== */
+
 /* ----------------------------------------------------------
    8. INDEX.HTML — HERO SECTION
-   Background-image set here via CSS (NOT <img> tag)
    ---------------------------------------------------------- */
 .hero {
     background-image:
-        radial-gradient(ellipse at 20% 50%, rgba(168, 85, 247, 0.25) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, rgba(124, 58, 237, 0.2) 0%, transparent 50%),
-        linear-gradient(135deg, #2D1B69 0%, #1a0f4a 50%, #0d0828 100%);
+        radial-gradient(ellipse at 20% 50%, rgba(245, 158, 11, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
+        linear-gradient(135deg, #0F4C3A 0%, #0A3A2C 50%, #062319 100%);
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
@@ -292,7 +312,6 @@ footer.site-footer {
     position: relative;
     overflow: hidden;
 }
-
 
 .hero-content {
     position: relative;
@@ -317,7 +336,7 @@ footer.site-footer {
 }
 
 .hero .hero-description {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.05rem;
     margin-bottom: 2rem;
     max-width: 560px;
@@ -349,7 +368,7 @@ footer.site-footer {
 }
 
 .search-form input[type="search"]::placeholder {
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .search-form input[type="search"]:focus {
@@ -363,7 +382,7 @@ footer.site-footer {
     font-size: 1rem;
     font-weight: 700;
     background-color: var(--accent);
-    color: var(--white);
+    color: var(--primary);
     border: 2px solid var(--accent);
     border-radius: 0 6px 6px 0;
     cursor: pointer;
@@ -374,6 +393,7 @@ footer.site-footer {
 .search-form button:focus {
     background-color: var(--accent-dark);
     border-color: var(--accent-dark);
+    color: var(--white);
 }
 
 /* ----------------------------------------------------------
@@ -459,7 +479,7 @@ table tbody tr:last-child {
 }
 
 table tbody tr:hover {
-    background-color: #F3F0FF;
+    background-color: var(--bg-section);
 }
 
 table tbody td {
@@ -476,7 +496,7 @@ table tbody td:first-child {
 .category-cell {
     background-color: var(--bg-section);
     font-weight: 700 !important;
-    color: var(--accent-dark) !important;
+    color: var(--primary) !important;
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 0.06em;
@@ -484,7 +504,7 @@ table tbody td:first-child {
 }
 
 /* ----------------------------------------------------------
-   12. JOBS.HTML — ASIDE ELEMENT
+   12. JOBS.HTML — generic ASIDE element
    ---------------------------------------------------------- */
 aside {
     float: right;
@@ -499,13 +519,12 @@ aside {
 
 aside h3 {
     font-size: 1rem;
-    color: var(--accent-dark);
+    color: var(--primary);
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--border);
 }
 
-/* Clearfix for aside float */
 .clearfix::after {
     content: '';
     display: table;
@@ -513,7 +532,352 @@ aside h3 {
 }
 
 /* ----------------------------------------------------------
-   13. ABOUT.HTML — STUDENT ID STYLES
+   13. JOBS.HTML — Main content layout & cards
+   ---------------------------------------------------------- */
+.content-container {
+    max-width: 1150px;
+    margin: 32px auto 48px;
+    padding: 0 19.2px;
+    overflow: hidden;
+}
+
+.jobs-intro {
+    background-color: var(--bg-section);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(15, 76, 58, 0.08);
+    padding: 19.2px;
+    margin-bottom: 32px;
+    border-left: 4px solid var(--accent);
+}
+
+.job-aside {
+    float: right;
+    width: 25%;
+    margin: 0 0 24px 32px;
+    padding: 16px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    background-color: var(--bg-section);
+    box-shadow: 0 2px 8px rgba(15, 76, 58, 0.08);
+}
+
+.job-aside h2 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 20.8px;
+}
+
+.job-aside ul {
+    padding-left: 19.2px;
+    margin-bottom: 0;
+}
+
+.job-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(15, 76, 58, 0.08);
+    padding: 22.4px;
+    margin-bottom: 28.8px;
+    width: 72%;
+    border-top: 4px solid var(--accent);
+}
+
+.job-card h2 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 26px;
+}
+
+.job-card h3 {
+    margin-top: 19.2px;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.job-card .job-reference {
+    font-weight: 700;
+    color: var(--accent-dark);
+}
+
+.job-card ol,
+.job-card ul {
+    padding-left: 22px;
+}
+
+.job-card li {
+    margin-bottom: 7px;
+}
+
+.application-note {
+    clear: both;
+    background-color: #FEF3C7;
+    border-radius: 8px;
+    padding: 19.2px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 10px rgba(15, 76, 58, 0.08);
+    border-left: 4px solid var(--accent);
+}
+
+.application-note h2 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+/* ----------------------------------------------------------
+   14. APPLY.HTML — Form layout & components
+   ---------------------------------------------------------- */
+.apply-intro {
+    background-color: var(--bg-section);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent);
+    margin-bottom: 2rem;
+}
+
+.application-form {
+    max-width: 720px;
+    margin: auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(15, 76, 58, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.application-form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--primary);
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+    border-color: var(--accent);
+    outline: 2px solid rgba(245, 158, 11, 0.3);
+    outline-offset: 1px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-dark);
+    color: var(--white);
+}
+
+/* ----------------------------------------------------------
+   15. ABOUT.HTML — Team intro card, definition list, quotes
+   ---------------------------------------------------------- */
+.team-intro-card {
+    background: var(--bg-section);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin: 0 0 2rem 0;
+    border-left: 4px solid var(--accent);
+}
+
+.team-intro-card ul,
+.team-intro-card ol {
+    margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.team-intro-card li {
+    margin: 0.4rem 0;
+}
+
+.contrib-definition-list {
+    background: var(--white);
+    border-left: 4px solid var(--accent);
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contrib-definition-list dt {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+}
+
+.contrib-definition-list dt:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.contrib-definition-list dd {
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.member-quote {
+    font-style: italic;
+    background: #FEF3C7;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 0.3rem;
+    color: var(--primary);
+}
+
+.quote-translation {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    display: block;
+    margin-top: 0.2rem;
+}
+
+/* ----------------------------------------------------------
+   16. ABOUT.HTML — Group photo figure
+   ---------------------------------------------------------- */
+.group-photo-figure {
+    border: 4px solid var(--primary);
+    border-radius: 16px;
+    background: var(--white);
+    padding: 0.4rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin: 0;
+    max-width: 400px;
+    width: 100%;
+}
+
+.group-photo-figure img {
+    border-radius: 12px;
+}
+
+.group-photo-figure figcaption {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}
+
+/* Generic figure fallback (used by gallery on index.html) */
+figure {
+    max-width: 100%;
+}
+
+/* ----------------------------------------------------------
+   17. ABOUT.HTML — Team grid, sections, fun facts table
+   ---------------------------------------------------------- */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.team-grid > div:first-child { flex: 1.2; min-width: 260px; }
+.team-grid > div:last-child  { flex: 1;   min-width: 220px; }
+
+.about-section {
+    margin-bottom: 2.5rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.fun-facts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    box-shadow: 0 2px 16px var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fun-facts-table caption {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.75rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.fun-facts-table th {
+    padding: 0.9rem 1.1rem;
+    text-align: left;
+    font-weight: 700;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.fun-facts-table td {
+    padding: 0.85rem 1.1rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+}
+
+.fun-facts-table tbody tr {
+    border-bottom: 1px solid var(--border);
+}
+
+.fun-facts-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.fun-facts-table tbody tr:hover {
+    background-color: #D1FAE5;
+}
+
+.fun-facts-table thead tr {
+    background-color: #0F4C3A;
+}
+
+.fun-facts-table tbody tr:nth-child(even) {
+    background-color: #ECFDF5;
+}
+
+/* ----------------------------------------------------------
+   18. ABOUT.HTML — Student ID badge (legacy)
    ---------------------------------------------------------- */
 .student-id {
     display: inline-block;
@@ -530,54 +894,18 @@ aside h3 {
 }
 
 /* ----------------------------------------------------------
-   14. ABOUT.HTML — FIGURE (group photo)
-   ---------------------------------------------------------- */
-figure {
-    border: 3px solid var(--primary);
-    border-radius: 10px;
-    overflow: hidden;
-    display: inline-block;
-    max-width: 100%;
-    box-shadow: 0 4px 20px var(--shadow);
-}
-
-figcaption {
-    background-color: var(--primary);
-    color: var(--white);
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-    text-align: center;
-    font-style: italic;
-}
-
-/* ----------------------------------------------------------
-   15. ABOUT.HTML — FUN FACTS TABLE with hover effects
-   ---------------------------------------------------------- */
-.fun-facts-table tbody tr:hover {
-    background-color: #EDE9FE;   /* hex colour required */
-}
-
-.fun-facts-table thead tr {
-    background-color: #2D1B69;   /* hex colour — same as --primary */
-}
-
-.fun-facts-table tbody tr:nth-child(even) {
-    background-color: #F5F3FF;   /* hex colour */
-}
-
-/* ----------------------------------------------------------
-   17. UTILITY CLASSES
+   19. UTILITY CLASSES
    ---------------------------------------------------------- */
 .text-center { text-align: center; }
-.text-accent  { color: var(--accent); }
+.text-accent { color: var(--accent); }
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
 
-/* ----------------------------------------------------------
-   18. RESPONSIVE — MEDIA QUERIES
-   ---------------------------------------------------------- */
+/* ==========================================================
+   20. RESPONSIVE — MEDIA QUERIES
+   ========================================================== */
 
 /* Tablet (≤ 900px) */
 @media (max-width: 900px) {
@@ -595,11 +923,25 @@ figcaption {
         max-width: 100%;
     }
 
-    aside {
+    aside,
+    .job-aside {
         float: none;
         width: 100%;
         margin: 0 0 1.5rem 0;
     }
+
+    .job-card {
+        width: 100%;
+    }
+}
+
+/* Tablet small (≤ 700px) — about page typography */
+@media (max-width: 700px) {
+    .team-grid { flex-direction: column; }
+    .contrib-definition-list { padding: 0.5rem 1rem; }
+    .team-intro-card { padding: 1rem; }
+    .fun-facts-table th,
+    .fun-facts-table td { padding: 8px 10px; font-size: 0.85rem; }
 }
 
 /* Mobile (≤ 600px) */
@@ -619,7 +961,7 @@ figcaption {
     nav.site-nav ul li a {
         padding: 0.75rem 1rem;
         text-align: center;
-        border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        border-bottom: 1px solid rgba(245, 158, 11, 0.25);
     }
 
     .hero {
@@ -656,5 +998,16 @@ figcaption {
 
     table { font-size: 0.85rem; }
     table thead th, table tbody td { padding: 0.6rem 0.7rem; }
+
+    .application-form {
+        padding: 1.25rem;
+    }
+
+    .fun-facts-table th,
+    .fun-facts-table td { padding: 6px 8px; font-size: 0.75rem; }
 }
 
+/* Mobile small (≤ 480px) */
+@media (max-width: 480px) {
+    .section-container { padding: 0 1rem; }
+}

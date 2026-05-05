@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="104" viewBox="0 0 120 104" role="presentation" aria-hidden="true">
+  <!--
+    bg-pattern.svg — SolarCore Energy
+    Repeatable hexagon tile evoking solar PV cells.
+    Used as background-image on the body via styles.css.
+    Designed at 120x104 so two columns of hexagons tile seamlessly.
+  -->
+  <defs>
+    <style>
+      .hex { fill: none; stroke: #0F4C3A; stroke-width: 0.8; opacity: 0.06; }
+      .dot { fill: #F59E0B; opacity: 0.10; }
+    </style>
+  </defs>
+
+  <!-- Hexagons tile in two staggered columns -->
+  <g class="hex">
+    <polygon points="30,2 58,18 58,52 30,68 2,52 2,18"/>
+    <polygon points="90,2 118,18 118,52 90,68 62,52 62,18"/>
+    <polygon points="60,54 88,70 88,104 60,120 32,104 32,70"/>
+    <polygon points="0,54 28,70 28,104 0,120"/>
+    <polygon points="120,54 120,120 92,104 92,70"/>
+  </g>
+
+  <!-- Tiny gold dots in some hexagon centres -->
+  <g class="dot">
+    <circle cx="30" cy="35" r="1.2"/>
+    <circle cx="90" cy="35" r="1.2"/>
+    <circle cx="60" cy="87" r="1.2"/>
+  </g>
+</svg>

@@ -2,23 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Job listings for a creative digital media agency">
-    <meta name="keywords" content="jobs, front-end developer, ui ux designer, creative agency">
-    <meta name="author" content="James Magiatzis">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs | Creative Digital Media Agency</title>
+    <meta name="description" content="Current job openings at SolarCore Energy: Full-Stack Web Developer and Solar Systems Engineer roles in Melbourne, Australia.">
+    <meta name="keywords" content="solar jobs, renewable energy careers, full-stack developer Melbourne, solar engineer jobs, clean energy employment Australia">
+    <meta name="author" content="James Magiatzis">
+    <title>Jobs | SolarCore Energy</title>
 
-    <link rel="stylesheet" href="job1.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Embedded CSS (required per assignment — page-specific overrides) -->
+    <style>
+        /* Salary highlight pill — page-specific decoration */
+        .job-card p strong {
+            color: #0F4C3A;
+        }
+
+        /* Job reference number badge */
+        .job-reference {
+            display: inline-block;
+            background-color: #FEF3C7;
+            color: #D97706;
+            padding: 0.15rem 0.6rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        /* Subtle lift on hover for job cards */
+        .job-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .job-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(15, 76, 58, 0.14);
+        }
+    </style>
 </head>
 <body>
 
     <header class="site-header">
-        <a href="index.html" class="logo-link" aria-label="Pixelore Studio home">
-            <img src="images/logo.svg" alt="Pixelore Studio logo">
+        <a href="index.html" class="logo-link" aria-label="SolarCore Energy home">
+            <img src="images/logo.svg" alt="SolarCore Energy logo">
         </a>
-        <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; font-style: italic; margin: 0;">
-            Where creativity meets code.
+        <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; font-style: italic; margin: 0;">
+            Powering tomorrow with clean energy.
         </p>
     </header>
 
@@ -33,147 +61,166 @@
 
     <main class="content-container">
         <section class="jobs-intro">
-            <h2>Current Opportunities</h2>
+            <h2>Current Opportunities at SolarCore Energy</h2>
             <p>
-                We are looking for passionate and creative professionals to join our digital media agency.
-                Our team works across web design, branding, digital content, and client-focused web projects.
+                Join our growing team of engineers, developers, and technicians as we power
+                Australia's transition to clean energy. We deliver solar, wind, and hydro
+                solutions across Victoria, New South Wales, and Queensland.
             </p>
             <p>
-                Please review the current opportunities below and use the job reference number when completing
-                your application on the Apply page.
+                Please review the current opportunities below and use the job reference number
+                (e.g. <strong>WD001</strong>, <strong>SE002</strong>) when completing your
+                application on the Apply page.
             </p>
         </section>
 
-        <aside class="job-aside">
-            <h2>Why Work With Us?</h2>
+        <aside class="job-aside" aria-label="Why work at SolarCore">
+            <h2>Why Work at SolarCore?</h2>
             <p>
-                At our agency, you will work on exciting client projects in a collaborative and creative team
-                environment.
+                Build a meaningful career with a Melbourne-based renewable energy company that
+                is making a real difference for the climate.
             </p>
             <ul>
-                <li>Supportive and creative workplace</li>
-                <li>Opportunities to work on real client brands</li>
-                <li>Professional growth in web and design</li>
-                <li>Flexible and team-focused culture</li>
+                <li>Purpose-driven work in clean energy</li>
+                <li>Hybrid &amp; flexible working arrangements</li>
+                <li>Annual training &amp; certification budget</li>
+                <li>Salary packaging &amp; novated leasing</li>
+                <li>Discounted home solar &amp; battery installation</li>
+                <li>Diverse, inclusive, team-focused culture</li>
             </ul>
         </aside>
 
         <section class="job-card">
-            <h2>Front-End Web Developer</h2>
-            <p><span class="job-reference">Reference Number:</span> FE101</p>
-            <p><strong>Salary:</strong> $75,000 – $90,000 per year</p>
-            <p><strong>Reporting Line:</strong> Reports to the Creative Director</p>
+            <h2>Full-Stack Web Developer</h2>
+            <p><span class="job-reference">Reference Number:</span> WD001</p>
+            <p><strong>Salary:</strong> $75,000 &ndash; $95,000 per year</p>
+            <p><strong>Location:</strong> Melbourne CBD (hybrid, 3 days in office)</p>
+            <p><strong>Job Type:</strong> Full-time, permanent</p>
+            <p><strong>Reporting Line:</strong> Reports to the Head of Digital</p>
 
             <h3>Short Description</h3>
             <p>
-                We are seeking a Front-End Web Developer to create responsive and visually engaging websites
-                for a range of client projects. The successful applicant will work closely with designers and
-                content creators to deliver high-quality web experiences.
+                We are seeking a Full-Stack Web Developer to build and maintain SolarCore's
+                public-facing websites and customer portals. You will work across PHP, MySQL,
+                HTML5, and CSS3 to deliver responsive, accessible, and secure web applications
+                that help customers explore our renewable energy products and track their solar
+                system performance.
             </p>
 
             <h3>Key Responsibilities</h3>
             <ol>
-                <li>Develop responsive website layouts using HTML5 and CSS3.</li>
-                <li>Translate design mock-ups into functional and accessible web pages.</li>
-                <li>Maintain visual consistency across multiple client websites.</li>
-                <li>Test and refine pages to improve usability and presentation.</li>
-                <li>Work closely with designers and project team members to meet deadlines.</li>
+                <li>Develop responsive web pages and dynamic features using PHP and MySQL.</li>
+                <li>Design and maintain database schemas, write secure SQL queries with prepared statements.</li>
+                <li>Build server-side form validation and authenticated administrator dashboards.</li>
+                <li>Ensure WCAG 2.1 AA accessibility compliance across all customer-facing pages.</li>
+                <li>Collaborate with UX designers and the marketing team to launch new campaigns.</li>
+                <li>Maintain version control via Git and participate in peer code reviews.</li>
             </ol>
 
             <h3>Essential Requirements</h3>
             <ul>
-                <li>Strong skills in HTML5 and CSS3.</li>
-                <li>Understanding of responsive web design principles.</li>
-                <li>Ability to follow design specifications accurately.</li>
-                <li>Good communication and teamwork skills.</li>
-                <li>Attention to detail and commitment to quality.</li>
+                <li>Strong proficiency in PHP 7+ / 8+ and MySQL.</li>
+                <li>Solid HTML5 and CSS3 skills, including responsive design and Flexbox/Grid.</li>
+                <li>Understanding of web security: prepared statements, password hashing, session handling.</li>
+                <li>Experience with Git-based collaborative workflows.</li>
+                <li>Excellent written communication and team collaboration skills.</li>
             </ul>
 
-            <h3>Preferable Requirements</h3>
+            <h3>Desirable Requirements</h3>
             <ul>
-                <li>Experience working on client-based web projects.</li>
-                <li>Knowledge of accessibility and usability best practices.</li>
-                <li>Familiarity with branding and digital media workflows.</li>
+                <li>Experience with the LAMP/XAMPP stack and Apache configuration.</li>
+                <li>Familiarity with Australian renewable energy industry or sustainability sector.</li>
+                <li>Knowledge of accessibility standards (WCAG) and SEO best practice.</li>
+                <li>Experience integrating REST APIs (e.g. solar inverter monitoring data).</li>
             </ul>
         </section>
 
         <section class="job-card">
-            <h2>UI/UX Designer</h2>
-            <p><span class="job-reference">Reference Number:</span> UX202</p>
-            <p><strong>Salary:</strong> $70,000 – $85,000 per year</p>
-            <p><strong>Reporting Line:</strong> Reports to the Design Lead</p>
+            <h2>Solar Systems Engineer</h2>
+            <p><span class="job-reference">Reference Number:</span> SE002</p>
+            <p><strong>Salary:</strong> $85,000 &ndash; $110,000 per year</p>
+            <p><strong>Location:</strong> Melbourne (with travel to project sites across Victoria)</p>
+            <p><strong>Job Type:</strong> Full-time, permanent</p>
+            <p><strong>Reporting Line:</strong> Reports to the Engineering Manager</p>
 
             <h3>Short Description</h3>
             <p>
-                We are looking for a UI/UX Designer to help create engaging and user-friendly digital experiences
-                for our clients. This role focuses on interface design, visual communication, and improving how
-                users interact with websites and digital content.
+                We are looking for a Solar Systems Engineer to design and oversee residential
+                and commercial solar PV installations. You will be responsible for system
+                sizing, electrical design, grid-connection paperwork, and on-site
+                commissioning. This is a hands-on role for an engineer who wants their work
+                to directly contribute to Australia's clean energy transition.
             </p>
 
             <h3>Key Responsibilities</h3>
             <ol>
-                <li>Design clean and attractive website interfaces for client projects.</li>
-                <li>Create wireframes, layout concepts, and visual design elements.</li>
-                <li>Work with developers to ensure designs are implemented correctly.</li>
-                <li>Support branding projects with consistent visual design choices.</li>
-                <li>Review and improve the usability of website layouts and page content.</li>
+                <li>Design solar PV systems for residential, commercial, and small-utility clients.</li>
+                <li>Perform site assessments, shading analysis, and energy yield modelling.</li>
+                <li>Prepare single-line diagrams, electrical drawings, and Clean Energy Council compliance documentation.</li>
+                <li>Liaise with distribution network service providers (DNSPs) for grid-connection approvals.</li>
+                <li>Supervise installation crews and conduct final commissioning &amp; safety testing.</li>
+                <li>Mentor junior engineers and apprentice electricians.</li>
             </ol>
 
             <h3>Essential Requirements</h3>
             <ul>
-                <li>Strong visual design and layout skills.</li>
-                <li>Understanding of user experience and interface design principles.</li>
-                <li>Ability to communicate design ideas clearly.</li>
-                <li>Good organisational and time management skills.</li>
-                <li>Ability to work effectively in a collaborative creative team.</li>
+                <li>Bachelor's degree in Electrical Engineering or related discipline.</li>
+                <li>Clean Energy Council (CEC) accreditation for grid-connect solar PV design and install.</li>
+                <li>Minimum 3 years of experience in solar PV system design.</li>
+                <li>Proficiency with PVsyst, AutoCAD Electrical, and HelioScope (or similar).</li>
+                <li>Current Australian driver's licence and willingness to travel to regional sites.</li>
             </ul>
 
-            <h3>Preferable Requirements</h3>
+            <h3>Desirable Requirements</h3>
             <ul>
-                <li>Experience with branding or digital content design.</li>
-                <li>Understanding of how design choices affect front-end development.</li>
-                <li>Previous experience in a creative agency environment.</li>
+                <li>Experience with battery storage and hybrid system design.</li>
+                <li>Knowledge of AS/NZS 5033 and AS/NZS 4777 standards.</li>
+                <li>Project management certification (e.g. PRINCE2, AGILE).</li>
+                <li>Previous experience with utility-scale (&gt; 100 kW) commercial installations.</li>
             </ul>
         </section>
 
-        <section class="application-note" style="background-color: #f3e8ff;">
+        <section class="application-note">
             <h2>How to Apply</h2>
             <p>
-                To apply for one of these roles, visit the <a href="apply.html">Apply</a> page and enter the correct
-                reference number for the job you are interested in.
+                To apply for one of these roles, visit the <a href="apply.html">Apply</a> page
+                and enter the correct reference number (<strong>WD001</strong> for the
+                Full-Stack Web Developer role, or <strong>SE002</strong> for the Solar Systems
+                Engineer role) for the position you are interested in. We review applications
+                on a rolling basis &mdash; early applicants are encouraged.
             </p>
         </section>
     </main>
 
     <footer class="site-footer">
 
-        <!-- ACKNOWLEDGEMENT OF COUNTRY
-             Contextual explanation required — NOT decorative -->
+        <!-- ACKNOWLEDGEMENT OF COUNTRY -->
         <section class="footer-acknowledgement" aria-label="Acknowledgement of Country">
             <h3>Acknowledgement of Country</h3>
             <p>
-                Pixelore Studio acknowledges the Traditional Custodians of the lands across
-                Australia on which our team members live and work. We pay our deepest respects
-                to Elders past, present, and emerging, and recognise their continuing connection
-                to land, waters, and culture.
+                SolarCore Energy acknowledges the Traditional Custodians of the lands across
+                Australia on which our renewable energy systems are designed, installed, and
+                operated. We recognise that caring for Country has been practised by First
+                Nations peoples for over 65,000 years, and we pay our deepest respects to
+                Elders past, present, and emerging.
             </p>
         </section>
 
         <!-- FOOTER LINKS — all 3 required: Jira + GitHub + email -->
         <nav class="footer-links" aria-label="Footer links">
             <a href="https://student-team-webprj.atlassian.net/jira/software/c/projects/PSW/boards/3/backlog" aria-label="Visit our Jira project board" target="_blank" rel="noopener noreferrer">
-                &#128203; Jira
+                <span aria-hidden="true">&#128203;</span> Jira
             </a>
             <a href="https://github.com/datbeo06/cos10026-pixelore-studio" aria-label="Visit our GitHub repository" target="_blank" rel="noopener noreferrer">
-                &#128025; GitHub
+                <span aria-hidden="true">&#128025;</span> GitHub
             </a>
-            <a href="mailto:hello@pixelorestudio.com" aria-label="Email Pixelore Studio">
-                &#9993; hello@pixelorestudio.com
+            <a href="mailto:hello@solarcore.com.au" aria-label="Email SolarCore Energy">
+                <span aria-hidden="true">&#9993;</span> hello@solarcore.com.au
             </a>
         </nav>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Pixelore Studio. All rights reserved. | COS10026 Group Project</p>
+            <p>&copy; 2026 SolarCore Energy. All rights reserved. | COS10026 Group Project</p>
         </div>
 
     </footer>
